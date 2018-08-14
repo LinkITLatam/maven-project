@@ -15,5 +15,12 @@ pipeline {
         }
       }
     }
+    stage('Mix') {
+      steps {
+        input(message: 'Are you ok?', id: 'ok', ok: 'Okeyy', submitter: 'mferrari', submitterParameter: 'mferrari')
+        isUnix()
+        pwd(tmp: true)
+      }
+    }
   }
 }
